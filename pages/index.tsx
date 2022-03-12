@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import { useState } from "react";
 import Layout from "../components/layout";
 import { cls } from "../libs/utils";
@@ -42,7 +43,7 @@ const Home: NextPage = () => {
       <div className="my-10 space-y-8">
         {signInType == "email" ? (
           <label className="flex flex-col">
-            <span class="">Email</span>
+            <span>Email</span>
             <input type="email" className="rounded-full border-2" />
           </label>
         ) : (
@@ -56,9 +57,11 @@ const Home: NextPage = () => {
         ) : (
           ""
         )}
-        <button className="hover: my-2 flex w-full justify-around rounded-full bg-orange-400 py-2 font-bold text-slate-100 shadow-md hover:bg-orange-500 hover:transition-colors">
-          놀러 가기
-        </button>
+        <Link href="/book">
+          <a className="hover: my-2 flex w-full justify-around rounded-full bg-orange-400 py-2 font-bold text-slate-100 shadow-md hover:bg-orange-500 hover:transition-colors">
+            놀러 가기
+          </a>
+        </Link>
       </div>
       <div className="relative my-5 flex flex-col items-center border-t-2 py-5">
         <span className="absolute top-[-12px] bg-white px-2 text-sm font-medium text-slate-500">
