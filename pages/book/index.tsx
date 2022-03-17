@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import moment from "moment";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -37,18 +38,26 @@ const Home: NextPage = () => {
       </div>
       <div className="py-4 text-xl">Time table</div>
       <div className="flex space-x-4">
-        <button className="rounded-full border-none bg-orange-300 px-2 text-white shadow-md hover:bg-orange-500">
-          11:00
-        </button>
-        <button className="rounded-full border-none bg-orange-300 px-2 text-white shadow-md hover:bg-orange-500">
-          13:00
-        </button>
-        <button className="rounded-full border-none bg-orange-300 px-2 text-white shadow-md hover:bg-orange-500">
-          16:00
-        </button>
-        <button className="rounded-full border-none bg-orange-300 px-2 text-white shadow-md hover:bg-orange-500">
-          17:00
-        </button>
+        <Link href="/book/confirm">
+          <a className="rounded-full border-none bg-orange-300 px-2 text-white shadow-md hover:bg-orange-500">
+            11:00
+          </a>
+        </Link>
+        <Link href="/book/confirm">
+          <a className="rounded-full border-none bg-orange-300 px-2 text-white shadow-md hover:bg-orange-500">
+            13:00
+          </a>
+        </Link>
+        <Link href="/book/confirm">
+          <a className="rounded-full border-none bg-orange-300 px-2 text-white shadow-md hover:bg-orange-500">
+            16:00
+          </a>
+        </Link>
+        <Link href="/book/confirm">
+          <a className="rounded-full border-none bg-orange-300 px-2 text-white shadow-md hover:bg-orange-500">
+            17:00
+          </a>
+        </Link>
       </div>
     </div>
   );
