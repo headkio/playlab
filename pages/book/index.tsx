@@ -1,16 +1,15 @@
 import type { NextPage } from "next";
-import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
-import "react-big-calendar/lib/css/react-big-calendar.css";
-
-const localizer = momentLocalizer(moment);
 
 const Home: NextPage = () => {
   return (
     <div>
       <div>
         <label>연령</label>
-        <input type="number" className="border-2"></input>
+        <input
+          type="text"
+          className="w-full rounded-full border-gray-300 pr-12 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500"
+        ></input>
       </div>
       <div>
         <label>날짜</label>
@@ -24,13 +23,6 @@ const Home: NextPage = () => {
           <option>Sensation Lab</option>
         </select>
       </div>
-      <Calendar
-        className="py-10"
-        localizer={localizer}
-        startAccessor="start"
-        endAccessor="end"
-        style={{ height: 500 }}
-      />
     </div>
   );
 };

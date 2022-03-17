@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
-import Layout from "../components/layout";
 import { cls } from "../libs/utils";
 
 const Home: NextPage = () => {
