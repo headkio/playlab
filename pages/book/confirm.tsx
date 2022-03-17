@@ -20,12 +20,12 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex justify-around space-x-4 p-10">
-        <Link href="/book">
+        <Link href="/book/complete">
           <a className="hover: my-2 flex w-full justify-around rounded-full bg-orange-400 py-2 font-bold text-slate-100 shadow-md hover:bg-orange-500 hover:transition-colors">
             YES
           </a>
         </Link>
-        <Link href="/book">
+        <Link href="/book/complete">
           <a className="hover: my-2 flex w-full justify-around rounded-full bg-orange-400 py-2 font-bold text-slate-100 shadow-md hover:bg-orange-500 hover:transition-colors">
             NO
           </a>

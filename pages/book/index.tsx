@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import moment from "moment";
 import Link from "next/link";
 
 const Home: NextPage = () => {
