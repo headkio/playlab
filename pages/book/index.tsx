@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import { getEnvironmentData } from "worker_threads";
+import Layout from "../../components/layout";
 
 const Home: NextPage = () => {
   return (
-    <div className="space-y-2">
-      <div className=" space-y-6 rounded-2xl bg-slate-100 px-4 py-10">
+    <Layout>
+      <div className="space-y-6 rounded-b-2xl px-4 py-10 shadow-md">
         <div className="relative  flex">
           <label className="absolute left-5 top-1 mx-2 text-ellipsis text-slate-500">
             나이
@@ -30,19 +32,19 @@ const Home: NextPage = () => {
             </label>
             <input
               type="text"
-              className="w-full rounded-r-full border-gray-300 py-4 px-12 shadow-sm shadow-md focus:border-orange-500 focus:outline-none focus:ring-orange-500"
+              className="w-full rounded-r-full border-gray-300 py-4 px-12 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500"
             />
           </div>
         </div>
 
-        <div className=" flex justify-around">
-          <button className="rounded-full border-2 border-orange-500 px-3 py-1 hover:bg-orange-500 hover:text-white hover:ring-2 hover:ring-orange-500 hover:ring-offset-2 hover:transition-all">
+        <div className=" flex justify-around space-x-4">
+          <button className="rounded-full border-2 border-orange-500 bg-white px-3 py-1 text-slate-500 hover:bg-orange-500 hover:text-white hover:ring-2 hover:ring-orange-500 hover:ring-offset-2 hover:transition-all">
             Farming Lab 🌱
           </button>
-          <button className="rounded-full border-2 border-orange-500 px-3 py-1 hover:bg-orange-500 hover:text-white hover:ring-2 hover:ring-orange-500 hover:ring-offset-2 hover:transition-all">
+          <button className="rounded-full border-2 border-orange-500 bg-white px-3 py-1 text-slate-500 hover:bg-orange-500 hover:text-white hover:ring-2 hover:ring-orange-500 hover:ring-offset-2 hover:transition-all">
             Drawing Lab 🌈
           </button>
-          <button className="rounded-full border-2 border-orange-500 px-3 py-1 hover:bg-orange-500 hover:text-white hover:ring-2 hover:ring-orange-500 hover:ring-offset-2 hover:transition-all">
+          <button className="rounded-full border-2 border-orange-500 bg-white px-3 py-1 text-slate-500 hover:bg-orange-500 hover:text-white hover:ring-2 hover:ring-orange-500 hover:ring-offset-2 hover:transition-all">
             Sensation Lab 🏃‍♀️
           </button>
         </div>
@@ -51,7 +53,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className=" space-y-6 rounded-2xl bg-slate-100 px-4 py-10">
+      <div className=" space-y-6 rounded-2xl px-4 py-10 shadow-md">
         <div className="text-center text-2xl font-thin">4월</div>
         <div className="g grid grid-cols-7 text-center">
           {["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"].map((day) => (
@@ -72,8 +74,8 @@ const Home: NextPage = () => {
           ))}
         </div>
       </div>
-      <div className="flex space-y-6 rounded-2xl bg-slate-100 px-4 py-5">
-        <div className="flex space-x-4">
+      <div className="flex space-y-6 rounded-2xl px-4 py-5 pb-10 shadow-md">
+        <div className="flex space-x-3">
           <Link href="/book/confirm">
             <a className="rounded-full border-none bg-orange-300 px-2 text-white shadow-md hover:bg-orange-500">
               11:00
@@ -96,7 +98,7 @@ const Home: NextPage = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
