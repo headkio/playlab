@@ -1,4 +1,7 @@
 {
   "editor.suggest.snippetsPreventQuickSuggestions": true,
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
 }
